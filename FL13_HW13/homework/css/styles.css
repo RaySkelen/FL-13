@@ -1,0 +1,126 @@
+.gridParentHeader {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0%;
+    grid-row-gap: 0px;
+    justify-items: end;
+}
+.gridParentHeader__firstChild { grid-area: 1 / 1 / 2 / 2; justify-self: start;}
+.gridParentHeader__secondChild { grid-area: 1 / 2 / 2 / 3; }
+.gridParentHeader__thirdChild { grid-area: 1 / 3 / 2 / 4; }
+.gridParentHeader__fourthChild { grid-area: 1 / 3 / 2 / 4; }
+.sameMargin{
+    margin: 0% 15% 0% 15%;
+}
+.firstSection__gridParent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0%;
+    grid-row-gap: 0px;
+}
+.firstSection__firstChild { grid-area: 1 / 1 / 2 / 2;}
+.firstSection__secondChild { grid-area: 1 / 2 / 2 / 3; }
+.colorOrange {
+    background-color: #FF6501;
+}
+.gameSectionGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2%;
+    grid-row-gap: 2%;
+    grid-auto-rows: minmax(min-content, max-content);
+}
+.gameSectionChild1 { grid-area: 1 / 1 / 2 / 2; }
+.gameSectionChild2 { grid-area: 1 / 2 / 2 / 3; }
+.gameSectionChild3 { grid-area: 1 / 3 / 2 / 4; }
+.gameSectionChild4 { grid-area: 2 / 1 / 3 / 2; }
+.gameSectionChild5 { grid-area: 2 / 2 / 3 / 3; }
+.gameSectionChild6 { grid-area: 2 / 3 / 3 / 4; }
+.secondSectionGrid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 3%;
+grid-row-gap: 1%;
+}
+.secondSectionChild1 { grid-area: 1 / 1 / 2 / 2; }
+.secondSectionChild2 { grid-area: 1 / 2 / 2 / 3; }
+.secondSectionChild3 { grid-area: 2 / 1 / 3 / 2; }
+.secondSectionChild4 { grid-area: 2 / 2 / 3 / 3; }
+.secondSectionChild5 { grid-area: 3 / 1 / 4 / 2; }
+.secondSectionChild6 { grid-area: 3 / 2 / 4 / 3; }
+.footerGrid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 2%;
+grid-row-gap: 0px;
+}
+.footerGrid_child1 { grid-area: 1 / 1 / 2 / 2; }
+.footerGrid_child2 { grid-area: 1 / 2 / 2 / 3; }
+@media screen and (max-width: 768px) {
+	.firstSection__gridParent {
+	    display: grid;
+	    grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	    grid-column-gap: 0%;
+	    grid-row-gap: 0px;
+	}
+	.firstSection__firstChild { grid-area: 2 / 1 / 3 / 2;}
+	.firstSection__secondChild { grid-area: 1 / 1 / 2 / 2; }
+	.gameSectionGrid {
+	    display: grid;
+	    grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+	    grid-column-gap: 7%;
+	    grid-row-gap: 2%;
+	    grid-auto-rows: minmax(min-content, max-content);
+	}
+	.gameSectionChild1 { grid-area: 1 / 1 / 2 / 2; }
+	.gameSectionChild2 { grid-area: 1 / 2 / 2 / 3; }
+	.gameSectionChild3 { grid-area: 2 / 1 / 3 / 2; }
+	.gameSectionChild4 { grid-area: 2 / 2 / 3 / 3; }
+	.gameSectionChild5 { grid-area: 3 / 1 / 4 / 2; }
+	.gameSectionChild6 { grid-area: 3 / 2 / 4 / 3; }
+	.secondSectionGrid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 1fr);
+		grid-column-gap: 0%;
+		grid-row-gap: 0%;
+	}
+	.secondSectionChild1 { grid-area: 1 / 1 / 2 / 2; }
+	.secondSectionChild2 { grid-area: 2 / 1 / 3 / 2; }
+	.secondSectionChild3 { grid-area: 3 / 1 / 4 / 2; }
+	.secondSectionChild4 { grid-area: 4 / 1 / 5 / 2; }
+	.secondSectionChild5 { grid-area: 5 / 1 / 6 / 2; }
+	.secondSectionChild6 { grid-area: 6 / 1 / 7 / 2; }
+	.footerGrid {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0%;
+		grid-row-gap: 20%;
+	}
+	.footerGrid__child1 { grid-area: 1 / 1 / 2 / 2; }
+	.footerGrid__child2 { grid-area: 2 / 1 / 3 / 2; }
+}
+@media screen and (max-width: 576px) {
+	.gameSectionGrid {
+	    display: grid;
+	    grid-template-columns: 1fr;
+		grid-template-rows: repeat(6, 1fr);
+	    grid-column-gap: 7%;
+	    grid-row-gap: 0%;
+	    grid-auto-rows: minmax(min-content, max-content);
+	}
+	.gameSectionChild1 { grid-area: 1 / 1 / 2 / 2; }
+	.gameSectionChild2 { grid-area: 2 / 1 / 3 / 2; }
+	.gameSectionChild3 { grid-area: 3 / 1 / 4 / 2; }
+	.gameSectionChild4 { grid-area: 4 / 1 / 5 / 2; }
+	.gameSectionChild5 { grid-area: 5 / 1 / 6 / 2; }
+	.gameSectionChild6 { grid-area: 6 / 1 / 7 / 2; }
+}
